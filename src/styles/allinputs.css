@@ -1,9 +1,36 @@
 .input-bar {
   padding: 10px;
   font-size: 20px;
+  width: 60%;
+  border: none;
+  border-radius: 15px;;
+}
+
+.corben-regular {
+  font-family: "Corben", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .inputs-container {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.add-button {
+
+  height: 40px;
+  width: 80px;
+  font-size: 20px;
+  background-color: rgb(73, 67, 155);
+  color: white;
+  border: none;
+  border-radius: 15px;
 }

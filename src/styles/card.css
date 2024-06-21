@@ -1,0 +1,27 @@
+.fancy-todo {
+  border: 2px solid black;
+  padding: 7px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  column-gap: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
