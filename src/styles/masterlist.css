@@ -12,3 +12,8 @@
   align-items: center;
   row-gap: 15px;
 }
+
+.delete-all-button {
+  background-color: rgb(205, 35, 205);
+  padding: 15px;
+}

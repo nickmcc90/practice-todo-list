@@ -4,24 +4,27 @@ import Card from './card'
 
 export default function TodaysList(props) {
 
-  const { todos } = props;
-
-  const curatedTodos = todos.filter((todo, todoIndex) => {
-    return (
-      todo.when === "today"
-    )
-  })
+  const { todos, handleDeleteTodo, handleEditTodo, deleteAllOfOneKind } = props;
 
   return (
     <div className="all-containers">
-      <i>Tasks for Today</i>
+      <h2>Tasks for Today</h2>
       <div className="colored-todaylist">
-        <ul>
-          {curatedTodos.map((todo, todoIndex) => {
-            <Card todo={todo}/>
+        <div>
+          {todos.map((todo, todoIndex) => {
+            return (
+              <>
+                {todo.when === "today" ? <Card handleEditTodo={handleEditTodo} handleDeleteTodo={handleDeleteTodo} todo={todo.todo} todoIndex={todoIndex}/> : null}
+              </>
+            )
           })}
-        </ul>
+        </div>
       </div>
+      <button className="delete-all-button" onClick={() => {
+        deleteAllOfOneKind("today")
+      }}>
+        Delete All?
+      </button>
     </div>
   )
 }

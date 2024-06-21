@@ -3,7 +3,7 @@ import '../styles/allinputs.css'
 
 export default function Allinputs(props) {
 
-  const { handleRadioChange, handleTextChange, textValue, setTextValue, addTodo } = props;
+  const { handleRadioChange, handleTextChange, textValue, setTextValue, addTodo, handleWarning, radioValue } = props;
 
   return (
     <div className="inputs-container corben-regular">
@@ -25,8 +25,10 @@ export default function Allinputs(props) {
         </label>
       </div>
       <button onClick={() => {
-        addTodo(textValue);
-        setTextValue("");
+        if(radioValue !== "") {   // if a radio value isn't selected, nothing will happen.
+          addTodo(textValue);
+          setTextValue("");
+        }
       }} className="add-button corben-regular">
         Add
       </button>
